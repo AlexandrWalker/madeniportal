@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Колпино</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" style="background-image: url(images/bg.png);">
+      <div class="container-fluid">
+
+        <div class="topbar">
+          <div class="container">
+            <div class="topbar__inner">
+              <div class="topbar__item">
+                <a class="topbar__link" href="#!">
+                  <h5>Помощь</h5>
+                </a>
+              </div>
+              <div class="topbar__item">
+                <a class="topbar__link" href="#!">
+                  <h5>Ваш регион проживания?</h5>
+                </a>
+                <a class="topbar__user" href="#!">
+                  <img class="topbar__user-img" src="images/user.svg" alt="user">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__head">
+              <a class="logo" href="#!">
+                <img class="logo__img" src="images/logo.svg" alt="logo">
+              </a>
+              <h1 class="header__title">Работа в Колпино</h1>
+            </div>
+            <div class="header__body">
+              <div class="header__search">
+                <form class="header__search-form" action="#">
+                  <input class="header__search-input" type="search" placeholder="Поиск вакансии или резюме"
+                    tabindex="1">
+                  <input class="header__search-btn" type="submit" value="Найти работу" tabindex="2">
+                  <button class="header__search-setting" type="button" tabindex="3">
+                    <img class="header__search-img" src="images/setting-white.svg" alt="setting">
+                  </button>
+                </form>
+              </div>
+              <div class="header__stat">
+                <div class="header__stat-item">
+                  <img class="header__stat-img" src="images/vacancy.svg" alt="vacancy">
+                  <h2 class="header__stat-text">736 вакансий</h2>
+                </div>
+                <div class="header__stat-item">
+                  <img class="header__stat-img" src="images/resume.svg" alt="vacancy">
+                  <h2 class="header__stat-text">1978 резюме</h2>
+                </div>
+              </div>
+              <div class="header__geo">
+                <a id="geoBtn" class="header__geo-btn" href="#!">
+                  <img class="header__geo-img" src="images/geo-white.svg" alt="geo">
+                </a>
+                <ul class="header__geo-list">
+                  <li class="header__geo-item">
+                    <a class="header__geo-link" href="#!">Металлострой</a>
+                  </li>
+                  <li class="header__geo-item">
+                    <a class="header__geo-link" href="#!">Понтонный</a>
+                  </li>
+                  <li class="header__geo-item">
+                    <a class="header__geo-link" href="#!">Сапёрный</a>
+                  </li>
+                  <li class="header__geo-item">
+                    <a class="header__geo-link" href="#!">Славянка</a>
+                  </li>
+                  <li class="header__geo-item">
+                    <a class="header__geo-link" href="#!">Тельмана</a>
+                  </li>
+                  <li class="header__geo-item">
+                    <a class="header__geo-link" href="#!">Усть-Ижора</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <div class="navigation">
+      <div class="container">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#!">
+              <h3>Последние вакансии</h3>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#!">
+              <h3>Последние резюме</h3>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#!">
+              <h3>Компании</h3>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#!">
+              <img class="navigation__img" src="images/guess.svg" alt="guess">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+<main class="main">
+  
+  <div class="filter">
+    <div class="container">
+      <div class="filter__inner">
+        <ul class="filter__list">
+          <p class="filter__text">Сортировать по</p>
+          <li class="filter__item">
+            <button class="filter__btn">
+              <img class="filter__arrow" src="images/arrow.svg" alt="">
+              <p class="filter__text">дате</p>
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn">
+              <img class="filter__arrow" src="images/arrow.svg" alt="">
+              <p class="filter__text">зарплате</p>
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn">
+              <img class="filter__arrow" src="images/arrow.svg" alt="">
+              <p class="filter__text">просмотрам</p>
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn">
+              <img class="filter__arrow" src="images/arrow.svg" alt="">
+              <p class="filter__text">все фильтры</p>
+            </button>
+          </li>
+        </ul>
+        <a class="filter__setting" href="#!">
+          <img class="filter__img" src="images/setting-green.svg" alt="setting">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-page">
+
+    <div class="pagination pagination--top">
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <a class="pagination__link pagination__active" href="#!">
+            <h5 class="pagination__text">1</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">2</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">3</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">4</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">5</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">6</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">7</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">8</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">9</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">10</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">11</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">12</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">13</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="main-page__body">
+        <div class="main-page__inner">
+          <div class="hot">
+            <div class="container">
+              <div class="hot__inner">
+                <div class="hot__head">
+                  <img class="hot__img" src="images/icon-fire.svg" alt="fire">
+                  <h2 class="hot__title">Горячие вакансии</h2>
+                </div>
+                <div class="hot__block">
+                  <table class="hot__table">
+                    <tbody>
+                      <tr class="vacancy">
+                        <td class="vacancy__item">
+                          <a class="vacancy__link" href="#!">
+                            <h4 class="vacancy__name">Повар</h4>
+                          </a>
+                          <div class="vacancy__details">
+                            <p class="vacancy__date">20 сентября</p>
+                            <p class="vacancy__location">Колпино</p>
+                          </div>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__pay">41000-60000 Р</h4>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__employer">ГФ ФУДХОЛДИНГ</h4>
+                        </td>
+                      </tr>
+                      <tr class="vacancy">
+                        <td class="vacancy__item">
+                          <a class="vacancy__link" href="#!">
+                            <h4 class="vacancy__name">Водитель-курьер с личным автомобилем</h4>
+                          </a>
+                          <div class="vacancy__details">
+                            <p class="vacancy__date">20 сентября</p>
+                            <p class="vacancy__location">Колпино</p>
+                          </div>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__pay">95000-105000 Р</h4>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__employer">Додо пицца</h4>
+                        </td>
+                      </tr>
+                      <tr class="vacancy">
+                        <td class="vacancy__item">
+                          <a class="vacancy__link" href="#!">
+                            <h4 class="vacancy__name">Помощник менеджера-оператор</h4>
+                          </a>
+                          <div class="vacancy__details">
+                            <p class="vacancy__date">20 сентября</p>
+                            <p class="vacancy__location">Колпино</p>
+                          </div>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__pay">от 50000 Р</h4>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__employer">Нева Маркет</h4>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vacancies">
+            <div class="container">
+              <div class="vacancies__inner">
+                <table class="vacancies__table">
+                  <tbody>
+                    <tr class="vacancy">
+                      <td class="vacancy__item">
+                        <a class="vacancy__link" href="#!">
+                          <h4 class="vacancy__name">Помощник менеджера-оператор</h4>
+                        </a>
+                        <div class="vacancy__details">
+                          <p class="vacancy__date">20 сентября</p>
+                          <p class="vacancy__location">Колпино</p>
+                        </div>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__pay">от 50000 Р</h4>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__employer">Нева Маркет</h4>
+                      </td>
+                    </tr>
+                    <tr class="vacancy">
+                      <td class="vacancy__item">
+                        <a class="vacancy__link" href="#!">
+                          <h4 class="vacancy__name">Помощник менеджера-оператор</h4>
+                        </a>
+                        <div class="vacancy__details">
+                          <p class="vacancy__date">20 сентября</p>
+                          <p class="vacancy__location">Колпино</p>
+                        </div>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__pay">от 50000 Р</h4>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__employer">Нева Маркет</h4>
+                      </td>
+                    </tr>
+                    <tr class="vacancy">
+                      <td class="vacancy__item">
+                        <a class="vacancy__link" href="#!">
+                          <h4 class="vacancy__name">Помощник менеджера-оператор</h4>
+                        </a>
+                        <div class="vacancy__details">
+                          <p class="vacancy__date">20 сентября</p>
+                          <p class="vacancy__location">Колпино</p>
+                        </div>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__pay">от 50000 Р</h4>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__employer">Нева Маркет</h4>
+                      </td>
+                    </tr>
+                    <tr class="vacancy">
+                      <td class="vacancy__item">
+                        <a class="vacancy__link" href="#!">
+                          <h4 class="vacancy__name">Помощник менеджера-оператор</h4>
+                        </a>
+                        <div class="vacancy__details">
+                          <p class="vacancy__date">20 сентября</p>
+                          <p class="vacancy__location">Колпино</p>
+                        </div>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__pay">от 50000 Р</h4>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__employer">Нева Маркет</h4>
+                      </td>
+                    </tr>
+                    <tr class="vacancy">
+                      <td class="vacancy__item">
+                        <a class="vacancy__link" href="#!">
+                          <h4 class="vacancy__name">Помощник менеджера-оператор</h4>
+                        </a>
+                        <div class="vacancy__details">
+                          <p class="vacancy__date">20 сентября</p>
+                          <p class="vacancy__location">Колпино</p>
+                        </div>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__pay">от 50000 Р</h4>
+                      </td>
+                      <td class="vacancy__item">
+                        <h4 class="vacancy__employer">Нева Маркет</h4>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner">
+            <div class="container">
+              <div class="banner__inner">
+                <img class="banner__img" src="images/growfood.png" alt="growfood">
+
+                <div class="banner__content">
+                  <a class="banner__link" href="#!">
+                    <h4 class="banner__name">Фасовщик/Фасовщица</h4>
+                  </a>
+                  <h4 class="banner__pay">35000-40000 Р</h4>
+                  <h5 class="banner__location">Колпино</h5>
+                </div>
+
+                <div class="banner__contacts">
+                  <a class="banner__link" href="tel:+79992477437">
+                    <h4 class="banner__tel">+7 (999) 247-74-37</h4>
+                  </a>
+                  <a class="banner__btn" href="#!">
+                    <h5 class="banner__btn-text">
+                      Быстрый отклик
+                    </h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hot">
+            <div class="container">
+              <div class="hot__inner">
+                <div class="hot__head">
+                  <img class="hot__img" src="images/icon-fire.svg" alt="fire">
+                  <h2 class="hot__title">Горячие вакансии</h2>
+                </div>
+                <div class="hot__block">
+                  <table class="hot__table">
+                    <tbody>
+                      <tr class="vacancy">
+                        <td class="vacancy__item">
+                          <a class="vacancy__link" href="#!">
+                            <h4 class="vacancy__name">Повар</h4>
+                          </a>
+                          <div class="vacancy__details">
+                            <p class="vacancy__date">20 сентября</p>
+                            <p class="vacancy__location">Колпино</p>
+                          </div>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__pay">41000-60000 Р</h4>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__employer">ГФ ФУДХОЛДИНГ</h4>
+                        </td>
+                      </tr>
+                      <tr class="vacancy">
+                        <td class="vacancy__item">
+                          <a class="vacancy__link" href="#!">
+                            <h4 class="vacancy__name">Водитель-курьер с личным автомобилем</h4>
+                          </a>
+                          <div class="vacancy__details">
+                            <p class="vacancy__date">20 сентября</p>
+                            <p class="vacancy__location">Колпино</p>
+                          </div>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__pay">95000-105000 Р</h4>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__employer">Додо пицца</h4>
+                        </td>
+                      </tr>
+                      <tr class="vacancy">
+                        <td class="vacancy__item">
+                          <a class="vacancy__link" href="#!">
+                            <h4 class="vacancy__name">Помощник менеджера-оператор</h4>
+                          </a>
+                          <div class="vacancy__details">
+                            <p class="vacancy__date">20 сентября</p>
+                            <p class="vacancy__location">Колпино</p>
+                          </div>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__pay">от 50000 Р</h4>
+                        </td>
+                        <td class="vacancy__item">
+                          <h4 class="vacancy__employer">Нева Маркет</h4>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <img class="sidebar__cover" src="images/cover.png" alt="cover">
+          <div class="sidebar__catalog">
+            <img class="sidebar__catalog-icon" src="images/icon-book.svg" alt="book">
+            <h6 class="sidebar__catalog-text">Каталог <a class="sidebar__catalog-link" href="#!">«Работа есть!»</a> №20
+              Читать свежий выпуск за август 2023 г. </h6>
+          </div>
+          <a class="sidebar__btn" href="#!">
+            <h5 class="sidebar__btn-text">Быстрый поиск вакансий</h5>
+          </a>
+          <div class="sidebar__filter">
+            <ul class="sidebar__filter-list">
+              <li class="sidebar__filter-item">
+                <a class="sidebar__filter-link" href="#!">Последние поступления за сутки</a>
+              </li>
+              <li class="sidebar__filter-item">
+                <a class="sidebar__filter-link" href="#!">Работа на производстве</a>
+              </li>
+              <li class="sidebar__filter-item">
+                <a class="sidebar__filter-link" href="#!">Работа на складе</a>
+              </li>
+              <li class="sidebar__filter-item">
+                <a class="sidebar__filter-link" href="#!">Работа в области продаж</a>
+              </li>
+              <li class="sidebar__filter-item">
+                <a class="sidebar__filter-link" href="#!">Работа водителем</a>
+              </li>
+              <li class="sidebar__filter-item">
+                <a class="sidebar__filter-link" href="#!">Работа в области медицины</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination pagination--bottom">
+      <ul class="pagination__list">
+        <li class="pagination__item">
+          <a class="pagination__link pagination__active" href="#!">
+            <h5 class="pagination__text">1</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">2</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">3</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">4</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">5</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">6</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">7</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">8</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">9</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">10</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">11</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">12</h5>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#!">
+            <h5 class="pagination__text">13</h5>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="container-fluid">
+    <div class="footer__inner">
+      <div class="footer__list">
+        <div class="footer__item">
+          <h6 class="footer__item-text">© 2009-2023</h6>
+          <a class="footer__item-link" href="#!">
+            <h6 class="footer__item-text">«Работа в Колпино»</h6>
+          </a>
+        </div>
+        <div class="footer__item">
+          <h6 class="footer__item-text">Рекламный отдел</h6>
+          <div class="footer__item-list">
+            <a class="footer__item-link" href="tel:244-88-22">
+              <img class="footer__item-icon" src="images/icon-tel.svg" alt="tel"></img>
+              <h6 class="footer__item-text">244-88-22</h6>
+            </a>
+            <a class="footer__item-link" href="tel:944-34-40">
+              <img class="footer__item-icon" src="images/icon-tel.svg" alt="tel"></img>
+              <h6 class="footer__item-text">944-34-40</h6>
+            </a>
+          </div>
+        </div>
+        <div class="footer__item">
+          <a class="footer__item-link" href="mailto:rabota@kolpino.ru">
+            <img class="footer__item-icon footer__item-icon--mail" src="images/icon-mail.svg" alt="email"></img>
+            <h6 class="footer__item-text">rabota@kolpino.ru</h6>
+          </a>
+        </div>
+        <div class="footer__item">
+          <img class="footer__item-img" src="images/cards.png" alt="cards"></img>
+        </div>
+      </div>
+      <div class="footer__menu">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#!">
+              <h6 class="footer__menu-text">Правила публикации</h6>
+            </a>
+          </li>
+          <span class="footer__menu-line"></span>
+          <li class="footer__menu-item">
+
+            <a class="footer__menu-link" href="#!">
+              <h6 class="footer__menu-text">Услуги и реклама</h6>
+            </a>
+          </li>
+          <span class="footer__menu-line"></span>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#!">
+              <h6 class="footer__menu-text">Контакты</h6>
+            </a>
+          </li>
+          <span class="footer__menu-line"></span>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#!">
+              <h6 class="footer__menu-text">Пользовательское соглашение</h6>
+            </a>
+          </li>
+          <span class="footer__menu-line"></span>
+          <li class="footer__menu-item">
+            <a class="footer__menu-link" href="#!">
+              <h6 class="footer__menu-text">Политика обработки персональных данных</h6>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+
+</html>
