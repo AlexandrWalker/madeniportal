@@ -5,27 +5,261 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vira</title>
-
+  <title>madeniprotal</title>
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper" id="wrapper">
     <header class="header">
-      <div class="container">
+      <div class="header__inner">
 
         <div class="topbar">
           <div class="container">
             <div class="topbar__inner">
 
+              <div class="language">
+                <button class="language__btn language-active">
+                  <span>QAZ</span>
+                </button>
+                <button class="language__btn">
+                  <span>RUS</span>
+                </button>
+                <button class="language__btn">
+                  <span>ENG</span>
+                </button>
+              </div>
+
+              <a class="logo" href="#!">
+                <img class="logo__img" src="../images/logo.svg" alt="logo">
+              </a>
+
+              <div class="search">
+                <input class="topbar-search-input" type="text" placeholder="Іздеу">
+                <button class="search__btn">
+                  <svg class="icons-search">
+                    <use xlink:href="#search"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="container">
-          <div class="header__inner">
+        <nav class="nav">
+          <div class="container">
+            <div class="nav__inner">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link" href="#!">
+                    ЖАҢАЛЫҚТАР
+                  </a>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Жаңалықтар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Мақалалар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Авторлар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Сұхбаттар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Кітаптар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Конкурс</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#!">
+                    АЙМАҚТАР
+                  </a>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Жаңалықтар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Мақалалар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Авторлар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Сұхбаттар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Кітаптар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Конкурс</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#!">
+                    АВТОРЛАР
+                  </a>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Жаңалықтар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Мақалалар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Авторлар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Сұхбаттар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Кітаптар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Конкурс</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#!">
+                    СҰХБАТТАР
+                  </a>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Жаңалықтар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Мақалалар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Авторлар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Сұхбаттар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Кітаптар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Конкурс</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#!">
+                    ОНЛАЙН-КОНКУРСТАР
+                  </a>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Жаңалықтар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Мақалалар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Авторлар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Сұхбаттар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Кітаптар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Конкурс</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link" href="#!">
+                    MADENI TV
+                  </a>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Жаңалықтар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Мақалалар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Авторлар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Сұхбаттар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Кітаптар</a>
+                    </li>
+                    <li class="dropdown__item">
+                      <a href="#!" class="dropdown__link">Конкурс</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <button class="burger" id="burger">
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </nav>
 
+        <div class="header-bottom">
+          <div class="container">
+            <div class="header-bottom__inner">
+              <ul class="header-bottom__list">
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    ӘДЕБИЕТ
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    ТЕАТР
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    МУЗЕЙ
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    КІТАПХАНА
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    МУЗЫКА
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    КИНО
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    Бейнелеу өнері
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    Салт-дәстүр
+                  </a>
+                </li>
+                <li class="header-bottom__item">
+                  <a class="header-bottom__link" href="#!">
+                    Туризм
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
