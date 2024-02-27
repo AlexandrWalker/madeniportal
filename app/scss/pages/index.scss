@@ -66,12 +66,14 @@
 }
 
 .news__box {
-  max-width: 310px;
+  display: flex;
+  gap: 20px;
 
   &-items {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    max-width: 310px;
   }
 
   &-content {

@@ -1,0 +1,50 @@
+.project {
+  margin-bottom: 87px;
+
+  &__title {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 25px 0 50px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    background-color: #F2F5FA;
+  }
+
+  &__blog {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #7C828B;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #272C31;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(124, 130, 139, 0.2);
+    margin-bottom: 42px;
+  }
+
+  &__link {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #3A87CA;
+  }
+}

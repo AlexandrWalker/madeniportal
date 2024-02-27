@@ -1,0 +1,148 @@
+.rubric {
+  margin: 26px 0 100px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  &__block {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: fit-content;
+
+    &-item {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: #272C31;
+      display: block;
+      height: fit-content;
+      padding: 10px;
+      background: #F2F5FA;
+    }
+  }
+
+  &__filter {
+    position: relative;
+
+    &-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 310px;
+      width: 100%;
+      height: 50px;
+      padding: 14px 20px 15px;
+      background: #F2F5FA;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+
+      svg {
+        transform: rotate(180deg);
+        width: 12px;
+        height: 7.41px;
+        fill: #272C31;
+      }
+
+      &.filter-active {
+        border-bottom: 1px solid #fff;
+      }
+
+      &.filter-active+.rubric__filter-list {
+        display: flex;
+      }
+    }
+
+    &-list {
+      display: none;
+      flex-direction: column;
+      background: #F2F5FA;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+    }
+
+    &-item {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      padding: 10px 20px;
+      color: #272C31;
+      text-align: left;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    width: calc(25% - 15px);
+    border-top: 4px solid #32B990;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      padding: 15px 20px 30px;
+    }
+
+    &-date {
+      opacity: 1;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 5px;
+    }
+
+    &-title {
+      font-family: 'Merriweather', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      color: #272C31;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      color: #7C828B;
+      margin-top: 10px;
+    }
+  }
+
+  &__img {
+    display: block;
+    aspect-ratio: 310/200;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

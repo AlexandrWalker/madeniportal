@@ -279,61 +279,6 @@ a:has(.society_img) {
   display: none;
 }
 
-.pagination {
-  margin-bottom: 30px;
-}
-
-.pagination__content {
-  width: fit-content;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 30px;
-}
-
-.pagination__arrow {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #EB222D;
-}
-
-.pagination__arrow .icons-arrow-angle {
-  width: 16px;
-  height: 10px;
-  rotate: 90deg;
-}
-
-.pagination__list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-}
-
-.pagination__item.pagination-active .pagination__link {
-  color: #EB222D;
-  pointer-events: none;
-}
-
-.pagination__link {
-  color: #969696;
-  font-family: Rubik;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.pagination__arrow-next .icons-arrow-angle {
-  rotate: -90deg;
-}
-
 .search {
   margin-bottom: 40px;
 }
@@ -469,6 +414,78 @@ a:has(.society_img) {
 
 .swiper-button-disabled {
   opacity: 0.6;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 34.5px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #272C31;
+  }
+
+  &__items {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &-link {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #272C31;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #272C31;
+  }
+
+  &-active {
+    color: #FF9416;
+  }
+}
+
+.breadcrumbs {
+  margin-top: 14px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    color: #7C828B;
+  }
+
+  &__link {
+    color: #7C828B;
+
+    &:last-child {
+      pointer-events: none;
+    }
+  }
 }
 
 [class*=icons-] {

@@ -47,6 +47,7 @@ function scripts() {
   return src([
     'app/js/main.js'
   ])
+    .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
@@ -69,7 +70,7 @@ function watching() {
   });
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/images/src'], images);
-  watch(['app/js/**/*.js'], scripts);
+  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/components/*', 'app/pages/*'], pages);
   watch(['app/*.html']).on('change', browserSync.reload);
 }

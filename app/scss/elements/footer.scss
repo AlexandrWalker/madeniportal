@@ -151,43 +151,6 @@
       }
     }
 
-    .socials {
-      display: flex;
-      align-items: center;
-
-      &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 30px;
-      }
-
-      .facebook {
-        background: #2F5DA2;
-      }
-
-      .instagram {
-        background: #FF7C9B;
-      }
-
-      .vkontakte {
-        background: #37608F;
-      }
-
-      .youtube {
-        background: #F54721;
-      }
-
-      .telegram {
-        background: #00A3FF;
-      }
-
-      .whatsapp {
-        background: #2ADB7B;
-      }
-    }
-
     .btn-up {
       display: flex;
       justify-content: center;
@@ -202,5 +165,42 @@
         height: 13.5px;
       }
     }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+  }
+
+  .facebook {
+    background: #2F5DA2;
+  }
+
+  .instagram {
+    background: #FF7C9B;
+  }
+
+  .vkontakte {
+    background: #37608F;
+  }
+
+  .youtube {
+    background: #F54721;
+  }
+
+  .telegram {
+    background: #00A3FF;
+  }
+
+  .whatsapp {
+    background: #2ADB7B;
   }
 }
