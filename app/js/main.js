@@ -61,28 +61,6 @@
     });
     //============================================================NAV-BTN-END
 
-    //============================================================FILTER-BTN-START
-    const filterBtn = document.getElementById('filterBtn');
-
-    if (!filterBtn) {
-      return;
-    } else {
-      filterBtn.addEventListener('click', function () {
-        filterBtn.classList.toggle('filter-active');
-      });
-
-      var rubricItem = document.querySelectorAll('.rubric__filter-item');
-
-      Array.from(rubricItem).forEach(function (item, i, rubricItem) {
-        item.addEventListener('click', function (e) {
-          filterBtn.innerHTML = this.value;
-          filterBtn.value = this.value;
-          filterBtn.classList.remove('filter-active');
-        });
-      });
-    }
-    //============================================================FILTER-BTN-END
-
     //============================================================SMOOTH-SCROLL-START
     const anchors = document.querySelectorAll('a[href*="#"]')
     for (let anchor of anchors) {
@@ -116,7 +94,7 @@
         nextEl: ".interview__btn-next",
         prevEl: ".interview__btn-prev",
       },
-      mousewheel: true,
+
       keyboard: true,
       breakpoints: {
         600: {
@@ -154,7 +132,7 @@
             prevEl: ".tv__btn-prev",
           },
           keyboard: true,
-          mousewheel: true,
+
         },
         1200: {
           slidesPerView: 3,
@@ -164,7 +142,7 @@
             prevEl: ".tv__btn-prev",
           },
           keyboard: true,
-          mousewheel: true,
+
         },
       },
     });
@@ -180,7 +158,7 @@
         nextEl: ".popular__btn-next",
         prevEl: ".popular__btn-prev",
       },
-      mousewheel: true,
+
       keyboard: true,
       breakpoints: {
         600: {
@@ -197,7 +175,206 @@
         },
       },
     });
+
+    var swiper = new Swiper(".news__slider-first", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      grabCursor: true,
+      loop: true,
+      navigation: {
+        nextEl: ".news__slider-first--btn-next",
+        prevEl: ".news__slider-first--btn-prev",
+      },
+
+      keyboard: true,
+    });
+
+    var swiper = new Swiper(".news__slider-second", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      grabCursor: true,
+      loop: true,
+      navigation: {
+        nextEl: ".news__slider-second--btn-next",
+        prevEl: ".news__slider-second--btn-prev",
+      },
+
+      keyboard: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    var swiper = new Swiper(".theater__slider", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".theater__btn-next",
+        prevEl: ".theater__btn-prev",
+      },
+
+      keyboard: true,
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        820: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    var swiper = new Swiper(".book__content", {
+      direction: "vertical",
+      slidesPerView: "auto",
+      spaceBetween: 15,
+      grabCursor: true,
+      freeMode: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      mousewheel: true,
+    });
+
+    var swiper = new Swiper(".books__slider", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".books__btn-next",
+        prevEl: ".books__btn-prev",
+      },
+      breakpoints: {
+        660: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".books__btn-next",
+            prevEl: ".books__btn-prev",
+          },
+          keyboard: true,
+
+        },
+        820: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".books__btn-next",
+            prevEl: ".books__btn-prev",
+          },
+          keyboard: true,
+
+        },
+        991: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".books__btn-next",
+            prevEl: ".books__btn-prev",
+          },
+          keyboard: true,
+
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".books__btn-next",
+            prevEl: ".books__btn-prev",
+          },
+          keyboard: true,
+
+        },
+      },
+    });
     //============================================================SWIPER-END  
 
+    //============================================================FILTER-BTN-START
+    (function () {
+      const rubricBtn = document.getElementById('rubricBtn');
+
+      if (!rubricBtn) {
+        return;
+      } else {
+        rubricBtn.addEventListener('click', function () {
+          rubricBtn.classList.toggle('filter-active');
+        });
+
+        var rubricItem = document.querySelectorAll('.rubric__filter-item');
+
+        Array.from(rubricItem).forEach(function (item, i, rubricItem) {
+          item.addEventListener('click', function (e) {
+            rubricBtn.innerHTML = this.value;
+            rubricBtn.value = this.value;
+            rubricBtn.classList.remove('filter-active');
+          });
+        });
+      }
+    })();
+
+    (function () {
+      const theaterBtn = document.getElementById('theaterBtn');
+
+      if (!theaterBtn) {
+        return;
+      } else {
+        theaterBtn.addEventListener('click', function () {
+          theaterBtn.classList.toggle('filter-active');
+        });
+
+        var theaterItem = document.querySelectorAll('.theater__filter-item');
+
+        Array.from(theaterItem).forEach(function (item, i, theaterItem) {
+          item.addEventListener('click', function (e) {
+            theaterBtn.innerHTML = this.value;
+            theaterBtn.value = this.value;
+            theaterBtn.classList.remove('filter-active');
+          });
+        });
+      }
+    })();
+    //============================================================FILTER-BTN-END
+
+    //============================================================TAB-BTN-START
+    const tabBtn = document.querySelectorAll('.theater__tab-item')
+    const tabItem = document.querySelectorAll('.theater-box__item')
+
+    tabBtn.forEach(tabClick);
+
+    function tabClick(item) {
+      item.addEventListener('click', function () {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute('data-tab');
+        let currentTab = document.querySelector(tabId);
+
+        if (!currentBtn.classList.contains('tab-active')) {
+
+          tabBtn.forEach(function (item) {
+            item.classList.remove('tab-active');
+          });
+
+          tabItem.forEach(function (item) {
+            item.classList.remove('tab-active');
+          });
+
+          currentBtn.classList.add('tab-active');
+          currentTab.classList.add('tab-active');
+        }
+      })
+    }
+    //============================================================TAB-BTN-END
   });
 })();

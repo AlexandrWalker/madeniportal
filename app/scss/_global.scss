@@ -468,6 +468,7 @@ a:has(.society_img) {
 
 .breadcrumbs {
   margin-top: 14px;
+  margin-bottom: 25px;
 
   &__inner {
     display: flex;
@@ -555,5 +556,23 @@ a:has(.society_img) {
 .icons-play {
   width: 17.9px;
   height: 20.63px;
+  fill: #FF9416;
+}
+
+.icons-double-arrow {
+  width: 13px;
+  height: 8px;
+  fill: #FF9416;
+}
+
+.icons-eye {
+  width: 19px;
+  height: 12px;
+  fill: #7C828B;
+}
+
+.icons-mark {
+  width: 29.63px;
+  height: 18.62px;
   fill: #FF9416;
 }
