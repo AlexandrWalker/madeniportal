@@ -155,6 +155,7 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #32B990;
+      order: 1;
     }
 
     &-date {
@@ -162,6 +163,7 @@
       font-size: 14px;
       line-height: 150%;
       color: #7C828B;
+      order: 3;
     }
 
     &-views {

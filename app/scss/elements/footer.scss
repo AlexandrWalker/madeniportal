@@ -20,6 +20,10 @@
     text-transform: uppercase;
     grid-column: 1/3;
     grid-row: 1/2;
+
+    &-link {
+      color: #fff;
+    }
   }
 
   &__text {
