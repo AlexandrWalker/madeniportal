@@ -62,6 +62,15 @@ function styles() {
     .pipe(browserSync.stream())
 }
 
+function new_styles() {
+  return src('app/scss/new_styles.scss')
+    .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'] }))
+    .pipe(concat('new_styles.css'))
+    .pipe(scss({ outputStyle: 'expanded' }))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
+}
+
 function watching() {
   browserSync.init({
     server: {
@@ -69,6 +78,7 @@ function watching() {
     }
   });
   watch(['app/scss/**/*.scss'], styles);
+  watch(['app/scss/**/*.scss'], new_styles);
   watch(['app/images/src'], images);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/components/*', 'app/pages/*'], pages);
@@ -94,6 +104,7 @@ function building() {
 }
 
 exports.styles = styles;
+exports.new_styles = new_styles;
 exports.images = images;
 exports.fonts = fonts;
 exports.pages = pages;
@@ -103,4 +114,4 @@ exports.watching = watching;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, scripts, pages, watching);
+exports.default = parallel(styles, new_styles, images, scripts, pages, watching);
