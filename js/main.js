@@ -376,5 +376,41 @@
       })
     }
     //============================================================TAB-BTN-END
+
+    //============================================================TABS-BTN-START
+    const tab__btns = document.querySelector('.tab__btns');
+
+    if (!tab__btns) {
+      return;
+    } else {
+      const tabBtn = document.querySelectorAll('.tab__btn')
+      const tabItem = document.querySelectorAll('.tab__item')
+
+      tabBtn.forEach(tabClick);
+
+      function tabClick(item) {
+        item.addEventListener('click', function () {
+          let currentBtn = item;
+          let tabId = currentBtn.getAttribute('data-tab');
+          let currentTab = document.querySelector(tabId);
+
+          if (!currentBtn.classList.contains('tab-active')) {
+
+            tabBtn.forEach(function (item) {
+              item.classList.remove('tab-active');
+            });
+
+            tabItem.forEach(function (item) {
+              item.classList.remove('tab-active');
+            });
+
+            currentBtn.classList.add('tab-active');
+            currentTab.classList.add('tab-active');
+          }
+        })
+      }
+    }
+    //============================================================TABS-BTN-END
+
   });
 })();
